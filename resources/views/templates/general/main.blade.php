@@ -23,8 +23,8 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <!-- Site wrapper -->
     <div class="wrapper">
-        @include('templates.navbar')
-        @include('templates.sidebar')
+        @include('templates.general.navbar')
+        @include('templates.general.sidebar')
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -47,7 +47,7 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-        @include('templates.footer')
+        @include('templates.general.footer')
         <!-- Control Sidebar -->
         <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
