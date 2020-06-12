@@ -1,12 +1,12 @@
 @extends('templates.main')
 
-@section('title', 'Bank Soal')
+@section('title', 'Level')
 
 @section('contents')
-<x-mhb-card :direction="'right'">
-    <button class="btn btn-navy" data-toggle="modal" data-target="#add-soal-modal">Tambah Soal</button>
+<x-mhb-card :direction="'right'" :cols="'col-md-10'">
+    <button class="btn btn-navy" data-toggle="modal" data-target="#add-level-modal">Tambah Level</button>
 </x-mhb-card>
-<x-mhb-card>
+<x-mhb-card :cols="'col-md-10'">
     <x-slot name="header">
         <h3 class="card-title">Daftar soal yang tersedia</h3>
         @include('libs.minimize-card-toolbox')
@@ -15,11 +15,10 @@
         <table class="table table-bordered table-hover data-table-here">
             <thead>
                 <tr>
-                    <th>ID Soal</th>
-                    <th>Level</th>
-                    <th>Pertanyaan</th>
-                    <th>Opsi</th>
-                    <th>Jawaban</th>
+                    <th>#</th>
+                    <th>Nama</th>
+                    <th>Limit Soal</th>
+                    <th>Jumlah Soal Terdaftar</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
@@ -31,7 +30,6 @@
                     </td>
                     <td>Win 95+</td>
                     <td> 4</td>
-                    <td>X</td>
                     <td>
                         <a class="btn btn-circle text-navy">
                             <i class="fas fa-pen"></i>
@@ -48,7 +46,6 @@
                     </td>
                     <td>Win 95+</td>
                     <td>5</td>
-                    <td>C</td>
                     <td>
                         <a class="btn btn-circle text-navy">
                             <i class="fas fa-pen"></i>
@@ -65,39 +62,17 @@
 @endsection
 
 @section('modals')
-<x-mhb-modal :id="'add-soal-modal'" :title="'Tambah Soal Baru'">
+<x-mhb-modal :id="'add-level-modal'" :title="'Tambah Level Baru'">
     <form action="" method="POST">
         @csrf
         @method('put')
         <div class="form-group">
-            <label for="soal">Soal</label>
-            <input id="soal" type="text" class="form-control" placeholder="Masukkan soal">
+            <label for="name">Nama</label>
+            <input id="name" type="text" class="form-control" placeholder="Masukkan nama level" required>
         </div>
         <div class="form-group">
-            <label for="option-a">Pilihan A</label>
-            <input id="option-a" type="text" class="form-control" placeholder="Masukkan Pilihan A">
-        </div>
-        <div class="form-group">
-            <label for="option-b">Pilihan B</label>
-            <input id="option-b" type="text" class="form-control" placeholder="Masukkan Pilihan B">
-        </div>
-        <div class="form-group">
-            <label for="option-c">Pilihan C</label>
-            <input id="option-c" type="text" class="form-control" placeholder="Masukkan Pilihan C">
-        </div>
-        <div class="form-group">
-            <label for="option-d">Pilihan D</label>
-            <input id="option-d" type="text" class="form-control" placeholder="Masukkan Pilihan D">
-        </div>
-        <div class="form-group">
-            <label for="answer">Jawaban</label>
-            <select name="" id="answer" class="form-control">
-                <option value="">--- PILIH JAWABAN ---</option>
-                <option value="a">A</option>
-                <option value="b">B</option>
-                <option value="c">C</option>
-                <option value="d">D</option>
-            </select>
+            <label for="question-limit">Limit Soal</label>
+            <input id="question-limit" type="text" class="form-control" placeholder="Masukkan limit soal pada level ini" required>
         </div>
     </form>
     <x-slot name="footer">

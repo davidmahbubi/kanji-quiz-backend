@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light-navy elevation-2">
     <!-- Brand Logo -->
     <a href="{{ url('/') }}" class="brand-link">
         <img src="{{ asset('img/logo.png') }}" alt="" class="brand-image" style="opacity: .8">
@@ -11,11 +11,11 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="{{ asset('adminlte/img/user2-160x160.jpg') }}" class="img-circle elevation-2"
+                <img src="{{ asset('img/profiles/default.png') }}" class="img-circle elevation-1"
                     alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <a href="#" class="d-block">Admin Name</a>
             </div>
         </div>
 
@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="../calendar.html" class="nav-link">
+                    <a href="{{ url('admin/level') }}" class="nav-link">
                         <i class="fas fa-lightbulb nav-icon"></i>
                         <p>
                             Level
@@ -49,58 +49,14 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-header">MULTI LEVEL EXAMPLE</li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-circle"></i>
+                <li class="nav-header">SESI</li>
+                <li class="nav-item">
+                    <a href="{{ url('admin/level') }}" class="nav-link">
+                        <i class="fas fa-sign-out-alt"></i>
                         <p>
-                            Level 1
-                            <i class="right fas fa-angle-left"></i>
+                            Sign Out
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>
-                                    Level 2
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-dot-circle nav-icon"></i>
-                                        <p>Level 3</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Level 2</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
             </ul>
         </nav>
