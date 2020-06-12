@@ -1,0 +1,14 @@
+.btn-navy {
+    background-color: #001F3F;
+    border: none;
+    color: white;
+}
+
+.btn-navy:hover {
+    background-color: #000f1f;
+    color: white;
+}
+
+.text-navy {
+    color: #001F3F;
+}

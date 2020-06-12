@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@yield('title')</title>
+    <title>Kanji Quiz Admin Panel - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('adminlte/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Font Awesome -->
@@ -16,6 +17,8 @@
     <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{--  Own CSS  --}}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('css')
 </head>
 
@@ -46,6 +49,7 @@
             </section>
             <!-- /.content -->
         </div>
+        @yield('modals')
         <!-- /.content-wrapper -->
         @include('templates.general.footer')
         <!-- Control Sidebar -->
@@ -64,6 +68,8 @@
     <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
     <!-- overlayScrollbars -->
     <script src="{{ asset('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    {{--  Own JS  --}}
+    <script src="{{ asset('js/script.js') }}"></script>
     @yield('js')
 </body>
 
