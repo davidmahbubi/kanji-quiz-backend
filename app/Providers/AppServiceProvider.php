@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\View\Components\CardComponent;
+use App\View\Components\HighlightCardComponent;
 use App\View\Components\ModalComponent;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -28,5 +29,6 @@ class AppServiceProvider extends ServiceProvider
     {
         Blade::component('mhb-card', CardComponent::class);
         Blade::component('mhb-modal', ModalComponent::class);
+        Blade::component('mhb-highlight-card', HighlightCardComponent::class);
     }
 }
