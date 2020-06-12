@@ -1,4 +1,4 @@
-@extends('templates.main')
+@extends('templates.general.main')
 
 @section('title', 'Level')
 
