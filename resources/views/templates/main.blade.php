@@ -47,6 +47,7 @@
             </section>
             <!-- /.content -->
         </div>
+        @yield('modals')
         <!-- /.content-wrapper -->
         @include('templates.footer')
         <!-- Control Sidebar -->
