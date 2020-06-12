@@ -52,7 +52,7 @@
                 <li class="nav-header">SESI</li>
                 <li class="nav-item">
                     <a href="{{ url('admin/level') }}" class="nav-link">
-                        <i class="fas fa-sign-out-alt"></i>
+                        <i class="nav-icon fas fa-sign-out-alt"></i>
                         <p>
                             Sign Out
                         </p>
