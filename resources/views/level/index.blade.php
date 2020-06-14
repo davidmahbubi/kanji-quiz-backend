@@ -18,6 +18,7 @@
                     <th>#</th>
                     <th>Nama</th>
                     <th>Limit Soal</th>
+                    <th>Skor per Soal</th>
                     <th>Jumlah Soal Terdaftar</th>
                     <th>Aksi</th>
                 </tr>
@@ -28,6 +29,7 @@
                     <td>Internet
                         Explorer 4.0
                     </td>
+                    <td>2</td>
                     <td>Win 95+</td>
                     <td> 4</td>
                     <td>
@@ -44,6 +46,7 @@
                     <td>Internet
                         Explorer 5.0
                     </td>
+                    <td>2</td>
                     <td>Win 95+</td>
                     <td>5</td>
                     <td>
@@ -73,6 +76,10 @@
         <div class="form-group">
             <label for="question-limit">Limit Soal</label>
             <input id="question-limit" type="number" class="form-control" placeholder="Masukkan limit soal pada level ini" required>
+        </div>
+        <div class="form-group">
+            <label for="question-score">Skor per Soal</label>
+            <input id="question-score" type="number" class="form-control" placeholder="Masukkan skor utk tiap soal pada level ini" required>
         </div>
     </form>
     <x-slot name="footer">

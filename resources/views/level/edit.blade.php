@@ -13,6 +13,10 @@
             <label for="question-limit">Limit Soal</label>
             <input id="question-limit" type="number" class="form-control" placeholder="Masukkan limit soal untuk level ini">
         </div>
+        <div class="form-group">
+            <label for="question-score">Skor per Soal</label>
+            <input id="question-score" type="number" class="form-control" placeholder="Masukkan skor utk tiap soal pada level ini" required>
+        </div>
     </form>
     <x-slot name="footer">
         <div class="text-right">
