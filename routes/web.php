@@ -7,22 +7,31 @@ Route::group(['middleware' => 'auth:admin'], function() {
     Route::get('/', function () {
         return view('dashboard.index');
     });
-    
-    Route::get('admin/soal', function() {
-        return view('soal.index');
+
+    Route::group(['prefix' => 'admin'], function() {
+
+        Route::group(['prefix' => 'soal'], function() {
+
+            Route::get('', function() {
+                return view('soal.index');
+            });
+            
+            Route::get('{question}/edit', function() {
+                return view('soal.edit');
+            });
+
+        });
+
+        Route::group(['prefix' => 'level'], function() {
+            Route::get('', 'Level\LevelController@index')->name('levelIndex');
+            Route::put('', 'Level\LevelController@store');
+            Route::patch('{level}', 'Level\LevelController@update');
+            Route::get('{level}/edit', 'Level\LevelController@edit')->name('levelEdit');
+            Route::get('{level}/delete', 'Level\LevelController@destroy');
+        });
+        
     });
     
-    Route::get('admin/soal/{question}/edit', function() {
-        return view('soal.edit');
-    });
-    
-    Route::get('admin/level/', function() {
-        return view('level.index');
-    });
-    
-    Route::get('admin/level/{level}/edit', function() {
-        return view('level.edit');
-    });
 
 });
 
