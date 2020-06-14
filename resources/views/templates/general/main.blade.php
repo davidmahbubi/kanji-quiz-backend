@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{--  Notiflix  --}}
+    <link rel="stylesheet" href="{{ asset('plugins/Notiflix/notiflix-2.3.1.min.css') }}">
     {{--  Own CSS  --}}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     @yield('css')
@@ -68,6 +70,9 @@
     <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
     <!-- overlayScrollbars -->
     <script src="{{ asset('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    {{--  Notiflix  --}}
+    <link rel="stylesheet" href="{{ asset('plugins/Notiflix/notiflix-2.3.1.min.js') }}">
+    @include('libs.ripple')
     {{--  Own JS  --}}
     <script src="{{ asset('js/script.js') }}"></script>
     @yield('js')

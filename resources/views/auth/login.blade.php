@@ -3,19 +3,20 @@
 @section('title', 'Login')
 
 @section('contents')
-<p class="login-box-msg">Sign in to start your session</p>
+<p class="login-box-msg">ようこそ！</p>
 
-<form action="" method="post">
+<form action="" method="POST">
+    @csrf
     <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Username" required>
+        <input type="text" class="form-control" placeholder="Username" name="username" required>
         <div class="input-group-append">
             <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
+                <span class="fas fa-user"></span>
             </div>
         </div>
     </div>
     <div class="input-group mb-3">
-        <input type="password" class="form-control" placeholder="Password" required>
+        <input type="password" class="form-control" placeholder="Password" name="password" required>
         <div class="input-group-append">
             <div class="input-group-text">
                 <span class="fas fa-lock"></span>

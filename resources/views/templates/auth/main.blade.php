@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('adminlte/css/adminlte.min.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    {{--  Notiflix  --}}
+    <link rel="stylesheet" href="{{ asset('plugins/Notiflix/notiflix-2.3.1.min.css') }}">
 </head>
 
 <body class="hold-transition login-page">
@@ -38,6 +40,9 @@
     <script src="{{ asset('adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('adminlte/js/adminlte.min.js') }}"></script>
+    {{--  Notiflix  --}}
+    <link rel="stylesheet" href="{{ asset('plugins/Notiflix/notiflix-2.3.1.min.js') }}">
+    @include('libs.ripple')
 
 </body>
 
