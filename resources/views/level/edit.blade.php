@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <label for="question-limit">Limit Soal</label>
-            <input id="question-limit" type="text" class="form-control" placeholder="Masukkan limit soal untuk level ini">
+            <input id="question-limit" type="number" class="form-control" placeholder="Masukkan limit soal untuk level ini">
         </div>
     </form>
     <x-slot name="footer">
