@@ -46,7 +46,7 @@
         <x-slot name="footer">
             <div class="text-right">
                 <a href="{{ url('admin/level/' . $level->id . '/delete') }}" class="btn btn-outline-danger" onclick="return confirm('Yakin ingin menghapus data ini ?')">Hapus</a>
-                <button type="submit" class="btn btn-primary ml-1">Simpan Perubahan</button>
+                <button type="submit" class="btn btn-navy ml-1">Simpan Perubahan</button>
             </div>
         </x-slot>
     </x-mhb-card>
