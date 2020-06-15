@@ -70,6 +70,15 @@
             </div>
             @enderror
         </div>
+        <div class="form-group">
+            <label for="answer">Jawaban</label>
+            <select id="answer" class="form-control" name="answer">
+                <option value="a" {{ $question->answer == 'a' ? 'selected' : ''}}>A</option>
+                <option value="b" {{ $question->answer == 'b' ? 'selected' : ''}}>B</option>
+                <option value="c" {{ $question->answer == 'c' ? 'selected' : ''}}>C</option>
+                <option value="d" {{ $question->answer == 'd' ? 'selected' : ''}}>D</option>
+            </select>
+        </div>
     <x-slot name="footer">
         <div class="text-right">
             <button class="btn btn-outline-danger">Hapus</button>

@@ -90,6 +90,7 @@ class QuestionController extends Controller
             'option_b' => 'required',
             'option_c' => 'required',
             'option_d' => 'required',
+            'answer' => 'required',
         ]);
 
         try {
