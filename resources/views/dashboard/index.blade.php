@@ -22,7 +22,7 @@
     </div>
     <div class="col-sm-6 col-lg-4 col-xl-3">
         <x-mhb-highlight-card
-            :title="'Jumlah Kelas'"
+            :title="'Jumlah Level'"
             :value="number_format($params['levelCount'])"
             :icon="'fas fa-lightbulb'"
             :variant="'warning'"
