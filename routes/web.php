@@ -12,13 +12,11 @@ Route::group(['middleware' => 'auth:admin'], function() {
 
         Route::group(['prefix' => 'soal'], function() {
 
-            Route::get('', function() {
-                return view('soal.index');
-            });
-            
-            Route::get('{question}/edit', function() {
-                return view('soal.edit');
-            });
+            Route::get('', 'Question\QuestionController@index')->name('questionIndex');
+            Route::put('', 'Question\QuestionController@store');
+            Route::patch('{question}', 'Question\QuestionController@update');
+            Route::get('{question}/edit', 'Question\QuestionController@edit');
+            Route::get('{question}/delete', 'Question\QuestionController@destroy');
 
         });
 
