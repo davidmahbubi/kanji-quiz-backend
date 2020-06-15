@@ -7,7 +7,7 @@
     <div class="col-sm-6 col-lg-4 col-xl-3">
         <x-mhb-highlight-card
             :title="'Jumlah Soal'"
-            :value="400"
+            :value="number_format($params['soalCount'])"
             :icon="'fas fa-copy'"
             :variant="'success'"
         />
@@ -23,7 +23,7 @@
     <div class="col-sm-6 col-lg-4 col-xl-3">
         <x-mhb-highlight-card
             :title="'Jumlah Kelas'"
-            :value="5"
+            :value="number_format($params['levelCount'])"
             :icon="'fas fa-lightbulb'"
             :variant="'warning'"
         />
