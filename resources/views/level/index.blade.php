@@ -36,7 +36,7 @@
                     <td>{{ $level->name }}</td>
                     <td>{{ $level->limit }}</td>
                     <td>{{ $level->score }}</td>
-                    <td>4</td>
+                    <td>{{ count($level->question) }}</td>
                     <td>
                         <a href="{{ url('admin/level/' . $level->id . '/edit') }}" class="btn btn-circle text-navy">
                             <i class="fas fa-pen"></i>
