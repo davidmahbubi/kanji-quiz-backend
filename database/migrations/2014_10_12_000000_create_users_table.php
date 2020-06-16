@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('username', 64)->unique();
             $table->string('password', 255);
             $table->string('picture', 32)->default('default.png');
-            $table->string('api_token')->unique();
+            $table->string('api_token', 64)->unique();
             $table->rememberToken();
             $table->timestamps();
         });

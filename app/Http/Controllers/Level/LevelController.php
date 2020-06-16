@@ -15,8 +15,18 @@ class LevelController extends Controller
      * 
      * @return Illuminate\View\View|Illuminate\Contracts\View\Factory
      */
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->expectsJson()) {
+            return response()->json([
+                'success' => TRUE,
+                'message' => 'Get levels list successfull',
+                'data' => [
+                    'levels' => Level::all(),
+                ]
+            ]);
+        }
+
         return view('level.index', ['levels' => Level::all()]);
     }
 

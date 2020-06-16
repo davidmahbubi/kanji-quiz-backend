@@ -14,10 +14,27 @@ class QuestionController extends Controller
     /**
      * index method
      * 
+     * @param App\Model\Level\Level|null $level
+     * @param Illuminate\Http\Request $request
      * @return Illuminate\View\View|Illuminate\Contracts\View\Factory
      */
-    public function index()
+    public function index(Level $level = null, Request $request)
     {
+        
+        if ($request->expectsJson()) {
+
+            $questionsList = $level->question()->skip(0)->take($level->limit)->get();
+
+            return response()->json([
+                'success' => TRUE,
+                'message' => 'Get questions by level successfully',
+                'data' => [
+                    'level' => $level,
+                    'questions' => $questionsList,
+                ]
+            ]);
+        }
+
         return view('soal.index', [
             'questions' => Question::all(),
             'levels' => Level::all(),
@@ -56,6 +73,30 @@ class QuestionController extends Controller
         } catch (Exception $e) {
             return abort(503, $e->getMessage());
         }
+    }
+
+    /**
+     * show method
+     * 
+     * @param App\Model\Question\Question $question
+     * @param Illuminate\Http\Request $request
+     * @return Illuminate\Http\JsonResponse|void
+     */
+    public function show(Question $question, Request $request)
+    {
+        
+        $question->level;
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'success' => TRUE,
+                'message' => 'Success get question by id',
+                'data' => [
+                    'question' => $question,
+                ]
+            ]);
+        }
+        return abort(404);
     }
 
     /**
