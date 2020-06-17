@@ -7,6 +7,7 @@ Route::group(['prefix' => 'v' . env('API_VERSION', 1)], function() {
 
     Route::group(['prefix' => 'auth'], function() {
         Route::post('login', 'Auth\LoginController@postLogin');
+        Route::post('register', 'Auth\RegisterController@postRegister');
     });
 
     // Protected routes
