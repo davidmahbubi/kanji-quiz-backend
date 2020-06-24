@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['prefix' => 'v' . env('API_VERSION', 1), 'middleware' => 'allow.cors'], function() {
+Route::group(['prefix' => 'v' . env('API_VERSION', 1)], function() {
 
     Route::group(['prefix' => 'auth'], function() {
         Route::post('login', 'Auth\LoginController@postLogin');
