@@ -13,7 +13,6 @@ class LevelSeeder extends Seeder
      */
     public function run()
     {
-        Level::truncate();
         Level::insert([
             [
                 'name' => 'JLPT N5',
