@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             'name' => 'Suzu Aoba',
             'username' => 'suzuaoba',
             'password' => Hash::make(123),
-            'picture' => 'default.png',
+            'picture' => 'default.svg',
             'api_token' => Str::random(64),
             'created_at' => Carbon::now(),
         ]);

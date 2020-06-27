@@ -15,7 +15,7 @@ class AdminSeeder extends Seeder
     {
         Admin::create([
             'name' => 'David Mahbubi',
-            'picture' => 'default.png',
+            'picture' => 'default.svg',
             'username' => 'davidmhb',
             'password' => Hash::make(123),
         ]);

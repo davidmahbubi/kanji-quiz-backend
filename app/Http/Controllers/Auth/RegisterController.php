@@ -35,7 +35,7 @@ class RegisterController extends Controller
                     'name' => $request->name,
                     'username' => $request->username,
                     'password' => Hash::make($request->password),
-                    'picture' => 'default.png',
+                    'picture' => 'default.svg',
                     'api_token' => Str::random(64),
                     'created_at' => Carbon::now(),
                 ]);

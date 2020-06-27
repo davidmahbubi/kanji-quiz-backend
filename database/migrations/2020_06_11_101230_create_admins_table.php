@@ -16,7 +16,7 @@ class CreateAdminsTable extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->string('name', 64);
-            $table->string('picture', 64)->default('default.png');
+            $table->string('picture', 64)->default('default.svg');
             $table->string('username', 64)->unique();
             $table->string('password', 128);
             $table->timestamps();
