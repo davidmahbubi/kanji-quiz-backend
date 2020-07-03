@@ -23,7 +23,7 @@ class QuestionController extends Controller
         
         if ($request->expectsJson()) {
 
-            $questionsList = $level->question()->skip(0)->take($level->limit)->get();
+            $questionsList = $level->question()->skip(0)->inRandomOrder()->take($level->limit)->get();
 
             return response()->json([
                 'success' => TRUE,

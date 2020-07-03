@@ -31,5 +31,9 @@ Route::group(['prefix' => 'v' . env('API_VERSION', 1)], function() {
             Route::get('', 'Level\LevelController@index');
         });
 
+        Route::group(['prefix' => 'quiz'], function() {
+            Route::post('submit_quiz', 'Quiz\QuizController@postSubmit');
+        });
+
     });
 });
