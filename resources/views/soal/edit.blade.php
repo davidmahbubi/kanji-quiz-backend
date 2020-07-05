@@ -81,7 +81,7 @@
         </div>
     <x-slot name="footer">
         <div class="text-right">
-            <button class="btn btn-outline-danger">Hapus</button>
+            <a href="{{ url('admin/soal/' . $question->id . '/delete') }}" onclick="return confirm('Yakin ingin menghapus soal ini ?')" class="btn btn-outline-danger">Hapus</a>
             <button type="submit" class="btn btn-primary ml-1">Simpan Perubahan</button>
         </div>
         </form>

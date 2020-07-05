@@ -48,7 +48,7 @@
                             <a href="{{ url('admin/soal/' . $question->id . '/edit') }}" class="btn btn-circle text-navy">
                                 <i class="fas fa-pen"></i>
                             </a>
-                            <a href="{{ url('admin/soal/' . $question->id . '/delete') }}" onclick="return confirm('Yakin ingin menghapus data ini ?')" class="btn btn-circle text-danger">
+                            <a href="{{ url('admin/soal/' . $question->id . '/delete') }}" onclick="return confirm('Yakin ingin menghapus soal ini ?')" class="btn btn-circle text-danger">
                                 <i class="fas fa-trash"></i>
                             </a>
                         </td>

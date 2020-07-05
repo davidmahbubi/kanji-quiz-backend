@@ -36,4 +36,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * The relation's model that should includes for every query
+     */
+    protected $with = ['quizResult'];
+
+    /**
+     * One to many relation with QuizResult model
+     */
+    public function quizResult()
+    {
+        return $this->hasMany('App\Model\Quiz\QuizResult');
+    }
 }
