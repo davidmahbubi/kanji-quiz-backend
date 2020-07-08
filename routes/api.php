@@ -35,5 +35,11 @@ Route::group(['prefix' => 'v' . env('API_VERSION', 1)], function() {
             Route::post('submit_quiz', 'Quiz\QuizController@postSubmit');
         });
 
+        Route::group(['prefix' => 'user'], function() {
+            Route::patch('update', 'User\UserController@massUpdate');
+            Route::patch('update/{field}', 'User\UserController@singleUpdate');
+            Route::post('update/picture', 'User\UserController@pictureUpdate');
+        });
+
     });
 });
