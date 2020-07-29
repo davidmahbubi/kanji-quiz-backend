@@ -11,6 +11,8 @@ This is a Kanji Quiz Website, my personal project 😁. This is a Backend page o
 ## Technologies Behind This Project 👨‍💻
 * [PHP](https://www.php.net/)
 * [Laravel](https://laravel.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [AdminLTE 3](https://adminlte.io/)
 
 ## Project Team 😲
 Maintainer & Developer : [David Mahbubi](https://mhbproject.com)🛠
@@ -19,6 +21,13 @@ Maintainer & Developer : [David Mahbubi](https://mhbproject.com)🛠
 ```
 php atisan serve
 ```
+
+## Default Admin Credential
+```
+username : davidmhb
+password : 123
+```
+You can change it in [database seed](https://github.com/davidmahbubi/kanji_quiz_backend/blob/master/database/seeds/AdminSeeder.php)
 
 ## Contribution 
 Please feel free to contribute for this project 💖
