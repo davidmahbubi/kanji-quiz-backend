@@ -37,8 +37,9 @@ Route::group(['prefix' => 'v' . env('API_VERSION', 1)], function() {
 
         Route::group(['prefix' => 'user'], function() {
             Route::patch('update', 'User\UserController@massUpdate');
-            Route::patch('update/{field}', 'User\UserController@singleUpdate');
+            Route::patch('update/password', 'User\UserController@passwordUpdate');
             Route::post('update/picture', 'User\UserController@pictureUpdate');
+            Route::patch('update/{field}', 'User\UserController@singleUpdate');
         });
 
     });

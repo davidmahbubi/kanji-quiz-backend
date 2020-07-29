@@ -11,36 +11,28 @@ use Exception;
 
 class UserController extends Controller
 {
-    /**
-     * This method will do single update for user data
-     */
-    public function singleUpdate(Request $request, $field)
+
+    public function passwordUpdate(Request $request)
     {
-        try {
+        
+        $user = Auth::user();
 
-            $user = Auth::user();
+        if (Hash::check($request->current_password, $user->password)) {
 
-            if ($request->has('password')) {
-                $request->merge(['password' => Hash::make($request->password)]);
-            }
-
-            $user->$field = $request->$field;
+            $user->password = Hash::make($request->password);
             $user->save();
 
             return response()->json([
                 'success' => TRUE,
-                'message' => 'Selected field updated !',
-                'data' => [
-                    'user' => $user,
-                ]
+                'message' => 'Password updated !',
             ]);
 
-        } catch (Exception $e) {
+        } else {
 
             return response()->json([
                 'success' => FALSE,
-                'error' => $e->getMessage(),
-            ], 500);
+                'message' => 'Wrong current password !',
+            ]);
 
         }
     }
@@ -83,6 +75,36 @@ class UserController extends Controller
                 'success' => FALSE,
                 'message' => 'Please provide a picture !',
             ]);
+        }
+    }
+
+    /**
+     * This method will do single update for user data
+     */
+    public function singleUpdate(Request $request, $field)
+    {
+        try {
+
+            $user = Auth::user();
+
+            $user->$field = $request->$field;
+            $user->save();
+
+            return response()->json([
+                'success' => TRUE,
+                'message' => 'Selected field updated !',
+                'data' => [
+                    'user' => $user,
+                ]
+            ]);
+
+        } catch (Exception $e) {
+
+            return response()->json([
+                'success' => FALSE,
+                'error' => $e->getMessage(),
+            ], 500);
+
         }
     }
 

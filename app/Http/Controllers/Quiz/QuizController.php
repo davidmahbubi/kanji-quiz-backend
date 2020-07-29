@@ -16,7 +16,7 @@ class QuizController extends Controller
         
         $user = Auth::user();
         $answers = $request->all();
-        $level = Level::find(Question::find($answers[0]['id'])->first()->level)->first();
+        $level = Level::find(Question::find($answers[0]['id'])->level_id);
 
         $correctionResult = $this->corrector($request->all(), $level->score);
  
