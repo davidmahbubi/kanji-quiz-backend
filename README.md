@@ -22,12 +22,12 @@ Maintainer & Developer : [David Mahbubi](https://mhbproject.com)🛠
 php atisan serve
 ```
 
-## Default Admin Credential
+## Default Admin Credential 🔑
 ```
 username : davidmhb
 password : 123
 ```
-You can change it in [database seed](https://github.com/davidmahbubi/kanji_quiz_backend/blob/master/database/seeds/AdminSeeder.php)
+Of course feel free to change it in [database seed](https://github.com/davidmahbubi/kanji_quiz_backend/blob/master/database/seeds/AdminSeeder.php)
 
 ## Contribution 
 Please feel free to contribute for this project 💖
